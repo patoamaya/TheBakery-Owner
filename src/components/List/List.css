@@ -1,0 +1,22 @@
+.list-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    background-color: rgba(205, 32, 221, 0.377);
+    width: 81vw;
+    min-height: 104vh;
+    border-radius: 1rem;
+    margin-left: -1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-size:contain;
+
+}
+
+.list-title{
+    display: flex;
+    align-self: center;
+    
+}
+
