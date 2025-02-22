@@ -107,6 +107,10 @@
     color:black;
 }
 
+.card-info h4{
+    font-weight: 600;
+}
+
 .card-name{
     font-size: 1.3rem;
     font-weight: 600;

@@ -31,7 +31,7 @@ const Home = ({data, pageData, deleteAlert}) => {
                     </div>
                 :
                 data.map((dato)=>{
-                    let {nombre, imagenes, _id, tamano} = dato
+                    let {nombre, imagenes, _id, tamano, precio} = dato
                     return(
                         <div className="card-container" key={_id}>
                     <Link to={`/detail/${_id}`}>
@@ -40,7 +40,7 @@ const Home = ({data, pageData, deleteAlert}) => {
                         </div>
                         <div className="card-info">
                             <p className='card-name'>{nombre}</p>
-                           {tamano && <h4>{tamano} cm.</h4>}  
+                           {precio && <h4>$ {precio.toLocaleString()}</h4>}  
                         </div>
                     </Link>
             <div className="card-links">

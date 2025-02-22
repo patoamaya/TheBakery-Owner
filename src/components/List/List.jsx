@@ -19,7 +19,7 @@ const List = ({data, deleteAlert}) => {
                 </div> 
                 :
                 data.map((dato)=>{
-                    let {nombre, imagenes, _id} = dato
+                    let {nombre, imagenes, _id, precio} = dato
                     return(
                         <div className="card-container" key={_id}>
                         <Link to={`/detail/${_id}`}>
@@ -28,6 +28,7 @@ const List = ({data, deleteAlert}) => {
                             </div>
                             <div className="card-info">
                             <p className='card-name'>{nombre}</p>
+                            <p>$ {precio}</p>
                             </div>
                         </Link>
                 <div className="card-links">
