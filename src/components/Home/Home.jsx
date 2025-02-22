@@ -31,7 +31,7 @@ const Home = ({data, pageData, deleteAlert}) => {
                     </div>
                 :
                 data.map((dato)=>{
-                    let {nombre, imagenes, _id, tamano, precio} = dato
+                    let {nombre, imagenes, _id, precio} = dato
                     return(
                         <div className="card-container" key={_id}>
                     <Link to={`/detail/${_id}`}>
