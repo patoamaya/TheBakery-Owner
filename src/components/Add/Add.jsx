@@ -91,19 +91,14 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
               }
             }}
             >
-            <MenuItem value = 'torta'>Torta</MenuItem>
-            <MenuItem value = 'budin'>Budin</MenuItem>
+            <MenuItem value = 'tortaClasica'>Torta clasica</MenuItem>  {/* ex torta */}
+            <MenuItem value = 'tortaPersonalizada'>Torta personalizada</MenuItem>  {/* ex cumpleanos */}
+            <MenuItem value = 'variada'>Pasteleria variada </MenuItem> {/* ex budin y proximo a tener alfajorcitos, etc */}
             <MenuItem value = 'box'>Box</MenuItem>
             <MenuItem value = 'miniPasteleria'>Mini pasteleria</MenuItem>
-            <MenuItem value = 'navidad'>Navidad</MenuItem>
-            <MenuItem value = 'sanValentin'>San Valentin</MenuItem>
-            <MenuItem value = 'pascua'>Pascua</MenuItem>
-            <MenuItem value = 'diaPadre'>Dia del padre</MenuItem>
-            <MenuItem value = 'diaMadre'>Dia de la madre</MenuItem>
-            <MenuItem value = 'fechasPatrias'>Fechas patrias</MenuItem>
-            <MenuItem value = 'cumpleanos'>Cumpleaños</MenuItem>
-            <MenuItem value = 'catering'>Catering</MenuItem>
-            <MenuItem value = 'salado'>Salado</MenuItem>
+            <MenuItem value = 'fechaEspecial'>Fechas especiales</MenuItem>  {/* ex fechas patrias- diapadre, diamadre, pascua, navidad, sanvalentin */}
+            <MenuItem value = 'cateringSalado'>Catering salado</MenuItem> {/* ex salado */}
+            <MenuItem value = 'cateringDulce'>Catering dulce</MenuItem> {/* nueva*/}
   
           </Select>
         </FormControl>
@@ -112,7 +107,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             name='tamano'
             label="Tamaño"
             helperText={tamano && tamano.length > 0 ? "" : "Agregue el tamaño"}
-            value={categoria === 'torta' || categoria === 'budin' || categoria === 'cumpleanos' || categoria === 'box' || categoria.length === 0  ? tamano : 404 }
+            value={categoria === 'tortaClasica' || categoria === 'variada' || categoria === 'tortaPersonalizada' || categoria === 'box' || categoria.length === 0  ? tamano : 404 }
             onChange={handleChange}
             color='primary'
             sx={{
@@ -177,22 +172,22 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
    <div className="desc-img-container">
         <fieldset className='add-img-input'>
           <ul>
-            <li><p>Máximo 2 imagenes</p></li>
+            <li><p>Máximo 5 imagenes</p></li>
             <li><p>Tamaño máximo por imagen: 10mb</p></li>
           </ul>
           <legend>Seleccionar imagenes</legend>
         <input type="file" name="imagenes"  placeholder='Imágenes' multiple onChange={handleImageChange} className='add-searchImages-input' />
         </fieldset>
         
-        <div className={imgsPreview.length != 0 && imgsPreview.length <= 2? "add-imgs-container" : "no-imgs-container"}>    
+        <div className={imgsPreview.length != 0 && imgsPreview.length <= 5? "add-imgs-container" : "no-imgs-container"}>    
         {
           imgsPreview.length === 0 
             ? <h2 className='add-img-input-length'>Imagenes a cargar</h2>
-            : imgsPreview.length > 2 
+            : imgsPreview.length > 5 
             ? <h1 className='add-img-input-length-error'>Ha excedido el límite de imagenes a subir: 2</h1>
             : null
         }
-          {imgsPreview.length > 0 && imgsPreview.length <=2 &&(
+          {imgsPreview.length > 0 && imgsPreview.length <=5 &&(
             <div className='preview-container'>
             {imgsPreview.map((img)=>(
               <img src={img} alt="" key={img} className='add-img' />
@@ -201,7 +196,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
           )}
           </div>
           </div>
-          <div className={imgsPreview.length === 0 || imgsPreview.length > 2 ? "disabled": "btns-container"}>
+          <div className={imgsPreview.length === 0 || imgsPreview.length > 5 ? "disabled": "btns-container"}>
   
           <Link to="/">
           <Button variant="contained" color="error" className='error-btn' >

@@ -96,19 +96,14 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
                     color: '#000000', 
                     }
                 }}>
-                <MenuItem value = 'torta'>Torta</MenuItem>
-                <MenuItem value = 'budin'>Budin</MenuItem>
-                <MenuItem value = 'navidad'>Navidad</MenuItem>
-                <MenuItem value = 'sanValentin'>San Valentin</MenuItem>
-                <MenuItem value = 'pascua'>Pascua</MenuItem>
-                <MenuItem value = 'diaPadre'>Dia del padre</MenuItem>
+                <MenuItem value = 'tortaClasica'>Torta clasica</MenuItem>
+                <MenuItem value = 'tortaPersonalizada'>Torta personalizada</MenuItem>
+                <MenuItem value = 'variada'>Pasteleria variada</MenuItem>
                 <MenuItem value = 'box'>Box</MenuItem>
                 <MenuItem value = 'miniPasteleria'>Mini pasteleria</MenuItem>
-                <MenuItem value = 'diaMadre'>Dia de la madre</MenuItem>
-                <MenuItem value = 'fechasPatrias'>Fechas patrias</MenuItem>
-                <MenuItem value = 'cumpleanos'>Cumpleaños</MenuItem>
-                <MenuItem value = 'catering'>Catering</MenuItem>
-                <MenuItem value = 'salado'>Salado</MenuItem>
+                <MenuItem value = 'fechaEspecial'>Fecha especial</MenuItem>
+                <MenuItem value = 'cateringSalado'>Catering salado</MenuItem>
+                <MenuItem value = 'cateringDulce'>Catering dulce</MenuItem>
             </Select>
     </FormControl>
 
@@ -120,7 +115,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
           label="Tamaño"
           type='number'
           helperText={"Agregue el tamaño"}
-          value={categoria === 'torta' || categoria === 'budin' || categoria === 'cumpleanos' || categoria === 'box' || categoria.length === 0  ? tamano : 404 }
+          value={categoria === 'torta' || categoria === 'variada' || categoria === 'box' || categoria.length === 0  ? tamano : 404 }
           onChange={(e)=>setTamano(e.target.value)}
           color='none'
           sx={{
@@ -186,7 +181,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
       <div className="update-desc-img-container">
       <fieldset className='update-img-input'>
         <ul>
-          <li><p>Máximo 2 imagenes</p></li>
+          <li><p>Máximo 5 imagenes</p></li>
           <li><p>Tamaño máximo por imagen: 10mb</p></li>
         </ul>
         <legend>Seleccionar imagenes</legend>
@@ -194,17 +189,17 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
         
       </fieldset>
       
-      <div className={imgsPreview.length != 0 && imgsPreview.length <= 2? "update-imgs-container" : "no-imgs-container"}>    
+      <div className={imgsPreview.length != 0 && imgsPreview.length <= 5? "update-imgs-container" : "no-imgs-container"}>    
       {
         imgsPreview.length === 0 && imagenes?.length > 0 
           ? imagenes?.map((imagen)=>(
               <img src={imagen.url} alt="" key={imagen.url} className='update-img' />
             ))
-          : imgsPreview.length > 2 
-          ? <h1 className='update-img-input-length-error'>Ha excedido el límite de imagenes a subir: 2</h1>
+          : imgsPreview.length > 5 
+          ? <h1 className='update-img-input-length-error'>Ha excedido el límite de imagenes a subir: 5</h1>
           : null
       }
-        {imgsPreview.length > 0 && imgsPreview.length <=2 &&(
+        {imgsPreview.length > 0 && imgsPreview.length <=5 &&(
           <div className='update-preview-container'>
           {imgsPreview.map((img)=>(
             <img src={img} alt="" key={img} className='update-img' />
@@ -220,7 +215,7 @@ const Update = ({data, handleSubmit, handleImageChange, imgsPreview}) => {
           Cancelar
         </Button>
         </Link>
-        {imgsPreview.length > 2 ?  <Button className='disabled-'/> : <Button variant="contained" color="primary" type='submit' className='submit-btn' >
+        {imgsPreview.length > 5 ?  <Button className='disabled-'/> : <Button variant="contained" color="primary" type='submit' className='submit-btn' >
           Actualizar producto
         </Button>}
         </div>

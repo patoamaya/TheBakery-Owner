@@ -12,23 +12,17 @@ const Sidebar = () => {
             <p className='sidebar-title'>Habituales</p>
             <ul className='sidebar-ul1'>
                 <li><Link to="/" className='sidebar-link'>Todo</Link></li>
-                <li><Link to="/category/torta" className='sidebar-link'>Tortas</Link></li>
-                <li><Link to="/category/budin" className='sidebar-link'>Budines</Link></li>
+                <li><Link to="/category/tortaClasica" className='sidebar-link'>Tortas clasicas</Link></li>
+                <li><Link to="/category/variada" className='sidebar-link'>Pasteleria variada</Link></li>
                 <li><Link to="/category/box" className='sidebar-link'>Box</Link> </li>
             </ul>
             <p className='sidebar-title'>Especiales</p>
             <ul className="sidebar-ul2">
+                <li><Link to="/category/tortaPersonalizada" className='sidebar-link'>Tortas personalizadas</Link> </li>
                 <li><Link to="/category/miniPasteleria" className='sidebar-link'>Mini pasteleria</Link> </li>
-                <li><Link to="/category/navidad" className='sidebar-link'>Navidad</Link> </li>
-                <li><Link to="/category/sanValentin" className='sidebar-link'>San Valentin</Link> </li>
-                <li><Link to="/category/pascua" className='sidebar-link'>Pascua</Link> </li>
-                <li><Link to="/category/diaPadre" className='sidebar-link'>Dia del padre</Link> </li>
-                <li><Link to="/category/diaMadre" className='sidebar-link'>Dia de la madre</Link> </li>
-                <li><Link to="/category/fechasPatrias" className='sidebar-link'>Fechas patrias</Link> </li>
-                <li><Link to="/category/cumpleanos" className='sidebar-link'>Cumpleaños</Link> </li>
-                <li><Link to="/category/catering" className='sidebar-link'>Catering</Link> </li>
-                <li><Link to="/category/salado" className='sidebar-link'>Salados</Link> </li>
-
+                <li><Link to="/category/fechaEspecial" className='sidebar-link'>Fechas especiales</Link> </li>
+                <li><Link to="/category/cateringSalado" className='sidebar-link'>Catering salado</Link> </li>
+                <li><Link to="/category/cateringDulce" className='sidebar-link'>Catering dulce</Link> </li>
             </ul>
             <div className="sidebar-select-mobile-container">
 
@@ -40,7 +34,8 @@ const Sidebar = () => {
                     label="Habituales"
                 >
                     <MenuItem><Link to="/" className='sidebar-link'>Todo</Link></MenuItem>
-                    <MenuItem ><Link to="/category/torta" className='sidebar-link'>Tortas</Link></MenuItem>
+                    <MenuItem ><Link to="/category/tortaClasica" className='sidebar-link'>Tortas clasicas</Link></MenuItem>
+                    <MenuItem ><Link to="/category/variada" className='sidebar-link'>Pasteleria variada</Link></MenuItem>
                     <MenuItem ><Link to="/category/box" className='sidebar-link'>Box</Link></MenuItem>
                 </Select>
             </FormControl>
@@ -51,17 +46,11 @@ const Sidebar = () => {
                     id="demo-simple-select"
                     label="Especiales"
                 >
+                    <MenuItem ><Link to="/category/tortaPersonalizada" className='sidebar-link'>Tortas personalizadas</Link></MenuItem>
                     <MenuItem ><Link to="/category/miniPasteleria" className='sidebar-link'>Mini pasteleria</Link></MenuItem>
-                    <MenuItem ><Link to="/category/navidad" className='sidebar-link'>Navidad</Link></MenuItem>
-                    <MenuItem ><Link to="/category/sanValentin" className='sidebar-link'>San Valentin</Link></MenuItem>
-                    <MenuItem ><Link to="/category/pascua" className='sidebar-link'>Pascua</Link></MenuItem>
-                    <MenuItem ><Link to="/category/diaPadre" className='sidebar-link'>Dia del padre</Link></MenuItem>
-                    <MenuItem ><Link to="/category/diaMadre" className='sidebar-link'>Dia de la madre</Link></MenuItem>
-                    <MenuItem ><Link to="/category/fechasPatrias" className='sidebar-link'>Fechas patrias</Link></MenuItem>
-                    <MenuItem ><Link to="/category/cumpleanos" className='sidebar-link'>Cumpleaños</Link></MenuItem>
-                    <MenuItem ><Link to="/category/catering" className='sidebar-link'>Catering</Link></MenuItem>
-                    <MenuItem ><Link to="/category/salado" className='sidebar-link'>Salados</Link></MenuItem>
-                    
+                    <MenuItem ><Link to="/category/fechaEspecial" className='sidebar-link'>Fechas especiales</Link></MenuItem>
+                    <MenuItem ><Link to="/category/cateringSalado" className='sidebar-link'>Catering salado</Link></MenuItem>
+                    <MenuItem ><Link to="/category/cateringDulce" className='sidebar-link'>Catering dulce</Link></MenuItem>                    
                 </Select>
             </FormControl>
                     </div>
