@@ -188,8 +188,8 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
         }
           {imgsPreview.length > 0 && imgsPreview.length <=5 &&(
             <div className='preview-container'>
-            {imgsPreview.map((img)=>(
-              <img src={img} alt="" key={img} className='add-img' />
+            {imgsPreview.map((img, index)=>(
+              <img src={img} alt="" key={index} className='add-img' />
             ))}
             </div>
           )}

@@ -225,10 +225,10 @@
     }
 
 
-@media only screen and (min-width:200px) and (max-width:480px) {
+@media only screen and (min-width:320px) and (max-width:480px) {
 
     .update-container{
-        min-height: 162vh;
+        min-height: 180vh;
     }
 
     .update-back-btn{
@@ -237,7 +237,7 @@
 
     
     .update-img-input{
-            width: 21rem;
+            width: 90%;
     }
     
     .update-img-input legend{
@@ -245,12 +245,16 @@
     }
 
     .update-img-input ul{
-        width: 21rem;
+        width: 100%;
     }
     
     .update-preview-container{
         height: fit-content;
         padding-bottom: 1rem;
+    }
+
+    .update-desc-img-container{
+        width: 100%;
     }
 
     .update-img-input-length-error{
@@ -259,13 +263,13 @@
         padding-left: 1rem;
     }
     .no-imgs-container{
-        width: 20rem;
+        width: 95%;
     }
 }
 
 @media only screen and (min-width:481px) and (max-width:1279px) {
     .update-container{
-        min-height: 230vh;
+        min-height: 180vh;
     }
 
 }
