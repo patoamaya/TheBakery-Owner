@@ -99,7 +99,6 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
             <MenuItem value = 'fechaEspecial'>Fechas especiales</MenuItem>  {/* ex fechas patrias- diapadre, diamadre, pascua, navidad, sanvalentin */}
             <MenuItem value = 'cateringSalado'>Catering salado</MenuItem> {/* ex salado */}
             <MenuItem value = 'cateringDulce'>Catering dulce</MenuItem> {/* nueva*/}
-  
           </Select>
         </FormControl>
           <TextField
@@ -184,7 +183,7 @@ const Add = ({handleImageChange, handleChange, data, handleSubmit, imgsPreview})
           imgsPreview.length === 0 
             ? <h2 className='add-img-input-length'>Imagenes a cargar</h2>
             : imgsPreview.length > 5 
-            ? <h1 className='add-img-input-length-error'>Ha excedido el límite de imagenes a subir: 2</h1>
+            ? <h1 className='add-img-input-length-error'>Ha excedido el límite de imagenes a subir: 5</h1>
             : null
         }
           {imgsPreview.length > 0 && imgsPreview.length <=5 &&(
